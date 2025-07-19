@@ -601,7 +601,7 @@ const App = () => {
   };
 
   const fetchLeaderboard = async () => {
-    const res = await fetch('http://localhost:3000/api/leaderboard');
+    const res = await fetch('https://resumeinterviewquestion.onrender.com/api/leaderboard');
     const data = await res.json();
     setLeaderboard(data);
   };
@@ -609,7 +609,7 @@ const App = () => {
   // After quiz submission, POST user info and score
   useEffect(() => {
     if (showResults && user) {
-      fetch('http://localhost:3000/api/score', {
+      fetch('https://resumeinterviewquestion.onrender.com/api/score', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
